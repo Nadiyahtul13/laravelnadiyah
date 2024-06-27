@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Matakuliah extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama', 'kode', 'sks'];
-    public function perkuliahans()
+
+    protected $fillable = ['nama', 'kode', 'sks',];
+
+    public function perkuliahans(): HasMany
     {
         return $this->hasMany(Perkuliahan::class);
     }
-
 }
+
